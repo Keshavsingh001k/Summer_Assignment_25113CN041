@@ -1,17 +1,14 @@
 #include <iostream>
+using namespace std;
 
 int main() {
-    int a, b;
-    std::cout << "Enter two integers: ";
-    std::cin >> a >> b;
+    int n;
+    cout << "Enter n: ";
+    cin >> n;
 
-    if (a > b) {
-        std::cout << "The larger number is: " << a << std::endl;
-    } else if (b > a) {
-        std::cout << "The larger number is: " << b << std::endl;
-    } else {
-        std::cout << "Both numbers are equal." << std::endl;
-    }
+    int sum = n * (n + 1) / 2;
 
+    cout << "Sum = " << sum;
     return 0;
 }
+
