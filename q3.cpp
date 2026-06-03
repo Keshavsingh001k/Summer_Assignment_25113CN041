@@ -3,13 +3,16 @@ using namespace std;
 
 int main() {
     int n;
+    long long factorial = 1;
 
     cout << "Enter a number: ";
     cin >> n;
 
-    for(int i = 1; i <= 10; i++) {
-        cout << n << " x " << i << " = " << n * i << endl;
+    for (int i = 1; i <= n; i++) {
+        factorial *= i;
     }
+
+    cout << "Factorial = " << factorial;
 
     return 0;
 }
