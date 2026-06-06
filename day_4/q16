@@ -1,0 +1,31 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+
+// Helper function to check if a number is an Armstrong number
+bool isArmstrong(int num) {
+    int sum = 0, temp = num;
+    int digits = std::to_string(num).length(); // Instantly get number of digits
+
+    while (temp > 0) {
+        sum += std::round(std::pow(temp % 10, digits));
+        temp /= 10;
+    }
+    return sum == num;
+}
+
+int main() {
+    int start, end;
+    std::cout << "Enter start and end of range: ";
+    std::cin >> start >> end;
+
+    std::cout << "Armstrong numbers in the range: ";
+    for (int i = start; i <= end; ++i) {
+        if (isArmstrong(i)) {
+            std::cout << i << " ";
+        }
+    }
+    std::cout << "\n";
+
+    return 0;
+}
